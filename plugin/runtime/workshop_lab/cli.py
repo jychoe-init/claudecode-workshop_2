@@ -102,7 +102,7 @@ def initialize(root, module, stage, api_url, token):
     atomic_json(root / ".claude/settings.json", settings)
     for name, permissions in {
         "read-only": {"allow": ["mcp__hr__get_leave_balance"],
-                      "deny": ["mcp__hr__request_leave", "Edit(**)", "Write(**)"]},
+                      "deny": ["mcp__hr__request_leave", "Edit", "Write", "Bash"]},
         "assisted": {"allow": ["mcp__hr__get_leave_balance"],
                      "ask": ["mcp__hr__request_leave", "Edit(**)"]},
         "lab-automation": {"allow": ["mcp__hr__get_leave_balance", "mcp__hr__request_leave"],

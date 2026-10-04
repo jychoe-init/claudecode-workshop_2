@@ -202,7 +202,8 @@ def test_profiles_are_cli_presets_and_do_not_claim_managed_policy(tmp_path):
     base = json.loads((root / ".claude/settings.json").read_text())["permissions"]
     assert "mcp__hr__request_leave" not in base.get("ask", [])
     profiles = root / ".superlab/profiles"
-    assert "mcp__hr__request_leave" in json.loads((profiles / "read-only.json").read_text())["permissions"]["deny"]
+    read_only_deny = json.loads((profiles / "read-only.json").read_text())["permissions"]["deny"]
+    assert {"mcp__hr__request_leave", "Edit", "Write", "Bash"}.issubset(read_only_deny)
     assert "mcp__hr__request_leave" in json.loads((profiles / "assisted.json").read_text())["permissions"]["ask"]
     assert "mcp__hr__request_leave" in json.loads((profiles / "lab-automation.json").read_text())["permissions"]["allow"]
 
