@@ -122,7 +122,8 @@ def initialize(root, module, stage, api_url, token):
             f.write('\nexport function getUserLabel(id) {\n  return getUser(id)?.name ?? "unknown";\n}\n')
         subprocess.run(["git", "-C", str(root), "add", "src/userService.js"], check=True)
     return {"workspace": str(root), "module": module, "stage": stage,
-            "next": "cd into this workspace and run cca (or your configured Claude Code command)"}
+            "next": shlex.join([sys.executable, str(KIT / "lab.py"), "run", "--workspace", str(root)]),
+            "launcher_hint": "Add --command cca if cca is your configured Claude Code launcher."}
 
 
 def hook(action, data, cwd=None):
