@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 66840,
+    "sha256": "86ad39e45ce3b3ed565d06730f7f97d6a3d0cb27cfd74e55e85f740c0d6f71b3",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 2812,
+    "sha256": "00b38d6bb7f54f72b7b0f4c138d4474c7e086aa4c07b9329caa051870de94bcd",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 19340,
+    "sha256": "0487e942e489fffab11d413caa1b9795ac13463a213df77e545d833fea653bf9",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 55050,
+    "sha256": "4aa7e61031b5d52456433bd9804503717b8e0b5a3c35137f48ea5324c7913db4",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 12910,
+    "sha256": "cb089946ebaa9500565b2326e8411a8a6f6c8d1a11c843155b91cc5743e00e83",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 15963,
+    "sha256": "560089d4c75943749b7a81afdf628290c518713e8e82aff88b389c5cc5544c8e",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 28499,
+    "sha256": "ad7119a29add19ada00b88f5bab4e737ad5d2834a1281004505cca00b348bc07",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5.md"
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5",
+    "checked_on": "2026-10-04",
+    "status": 200,
+    "bytes": 27655,
+    "sha256": "a5c6fe2de8ab6891003d4470def0a612cebf2667bb5852dea41acab18b54377e",
+    "resolved_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5.md"
+  }
+]

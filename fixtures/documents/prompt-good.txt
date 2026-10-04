@@ -1,0 +1,2 @@
+다음 문장을 한국어로 번역해 주세요. 번역문만 출력해 주세요.
+"The meeting starts at nine."

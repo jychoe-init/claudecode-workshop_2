@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.local/
+.superlab-server/
+workspaces/
+measurements/
+artifacts/
+**/.superlab/
+**/.env*
+*.sqlite*
+*.stdout
+*.stderr
+.DS_Store
