@@ -151,6 +151,8 @@ def stage_standup(workspace, source):
     root, config = config_at(workspace)
     path = (root / source).resolve()
     artifact_root = (root / "artifacts").resolve()
+    if not artifact_root.is_relative_to(root):
+        raise ValueError("The artifacts directory must remain inside the workspace")
     if not path.is_relative_to(artifact_root) or not path.is_file():
         raise ValueError("Only a regular result file under this workspace's artifacts/ may be staged")
     active = json.loads((root / ".superlab/active.json").read_text())

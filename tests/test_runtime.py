@@ -176,6 +176,19 @@ def test_init_rejects_external_receiver_without_creating_workspace(tmp_path):
     assert not (tmp_path / "external").exists()
 
 
+def test_standup_rejects_artifact_directory_symlink_escape(tmp_path, service):
+    root = tmp_path / "repo"
+    initialize(root, "S1", "complete", service.base_url, "test-token")
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    (outside / "report.md").write_text("### 어제\noutside\n### 오늘\nnone\n### 확인 필요\nnone")
+    (root / "artifacts").rmdir()
+    (root / "artifacts").symlink_to(outside, target_is_directory=True)
+    with pytest.raises(ValueError):
+        stage_standup(root, "artifacts/report.md")
+    assert service.store.rows("outbox") == []
+
+
 def test_malformed_otlp_is_rejected(service):
     req = urllib.request.Request(service.base_url + "/v1/logs", data=b"not-protobuf",
         headers={"Content-Type": "application/x-protobuf", "X-Superlab-Token": "test-token"})
