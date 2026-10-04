@@ -4,15 +4,16 @@ import threading
 
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "plugin/runtime"))
-from workshop_lab.server import LabServer
-from workshop_lab.store import Store
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from workshop_core.local_api import LabServer, LocalStore
 
 
 @pytest.fixture
 def service(tmp_path):
-    server = LabServer(("127.0.0.1", 0), Store(tmp_path / "lab.sqlite3"), "test-token")
+    store = LocalStore(tmp_path / "api.sqlite3")
+    store.register("participant-token-a", "p001")
+    store.register("participant-token-b", "p002")
+    server = LabServer(("127.0.0.1", 0), store)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     yield server

@@ -1,4 +1,1 @@
--c constraints.txt
-# Python >=3.10. Exact validation environment is recorded under validation/.
-mcp==1.26.0
-opentelemetry-proto==1.40.0
+PyYAML==6.0.3
