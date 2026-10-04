@@ -13,3 +13,8 @@ artifacts/
 *.stdout
 *.stderr
 .DS_Store
+**/.workshop/
+measurements/
+.local/
+*.zip
+tokens*.csv
